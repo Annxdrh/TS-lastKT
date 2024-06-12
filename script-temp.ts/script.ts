@@ -1,3 +1,4 @@
+/Ботуева Анна/
 interface IUser {
     id: string;
     login: string;
@@ -148,6 +149,7 @@ class User implements IUser{
     
  
     }
+    / Шаталова Мария/
     transactionReceive(transactionId: string): any {
         // Поиск текущего пользователя (если пользователь уже авторизован)\\
         const currentUser = users.find((user) => user.online);
@@ -183,4 +185,3 @@ class User implements IUser{
     
    
 }
-/////
