@@ -185,3 +185,27 @@ class User implements IUser{
     
    
 }
+//  Ботуева Анна /
+//1. функция для генерирования рандомного пароля//
+function generateRandomPassword(length: number): string {
+    const symbol = "ABC1234567890";
+    let password = "";
+    for (let i = 0; i < length; i++) {
+        const randomPassw = Math.floor(Math.random() * symbol.length);
+        password += symbol[randomPassw];
+    }
+    return password;
+}
+//2. функция для проверки совпадения пароля//
+function checkPassword(password: string, proverkaPassword: string): boolean {
+    return password === proverkaPassword;
+}
+//например//
+const password = "123abc";
+const proverkaPassword = "123abc";
+
+if (checkPassword(password, proverkaPassword)) {
+    console.log("Пароли совпадают");
+} else {
+    console.log("Пароли не совпадают");
+}    
